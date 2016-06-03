@@ -1,5 +1,5 @@
 # Arduino-Timer
-A basic and rough Timer library for the Arduino
+A basic and rough Timer library for the Arduino, extended from Daniel Shiffman's O-o timer for Processing found in: Learning Processing, Example 10.5
 
 ## Installation
 * Download a copy of the current library
