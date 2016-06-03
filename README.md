@@ -43,7 +43,7 @@ Longer version
       pinMode( BUTTON_PIN, INPUT );
       timer.setDuration( 100 );
       timer.setLoop( true );
-      timer.start( );
+      timer.start();
     }
 
     void loop() {
