@@ -11,6 +11,24 @@ A basic and rough Timer library for the Arduino
 This is a very small and rough library for looping and non-looping timers. It is useful for triggering a function every n milliseconds, or reading values out of a sensor. There are lots of timer libraries for the Arduino. This one is about keeping it to the barebones.
 
 ## Usage
-Download the example sketches.
+Reading values out of pin 4 every 100ms
+
+    #include <timer.h>;
+    #define BUTTON_PIN 4
+    
+    Timer timer;
+    
+    void setup() {
+      Serial.begin( 9600 );
+      pinMode( BUTTON_PIN, INPUT );
+      timer.start( 100, true );
+    }
+
+    void loop() {
+      if ( timer.isFinished() ) {
+        int val = digitalRead( BUTTON_PIN );
+        Serial.println( val );
+      }
+    }
 
 ## Overview
