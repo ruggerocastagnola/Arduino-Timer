@@ -1,16 +1,16 @@
 # Arduino-Timer
-A basic and rough Timer library for the Arduino, extended from Daniel Shiffman's O-o timer for Processing found in: Learning Processing, Example 10.5
+A basic and rough Timer library for the Arduino, extended from Daniel Shiffman's O-o timer for Processing found in: (Learning Processing, Example 10.5)[https://github.com/shiffman/LearningProcessing/tree/master/chp10_algorithms/example_10_05_OOP_Timer]
 
-## Installation
+### Installation
 * Download a copy of the current library
 * Navigate to Documents/Arduino/libraries
 * Unpack the library there
-* Open the Arduino IDE and #include <timer.h>;
+* Open the Arduino IDE and `#include <timer.h>;`
 
-## What it is for
+### What it is for
 This is a very small and rough library for looping and non-looping timers. It is useful for triggering a function every n milliseconds, or reading values out of a sensor. There are lots of timer libraries for the Arduino. This one is about keeping it to the barebones.
 
-## Usage
+### Usage
 Reading values out of pin 4 every 100ms
 
     #include <timer.h>;
@@ -53,7 +53,7 @@ Longer version
       }
     }
 
-## Overview
+### Overview
     void setDuration( int )
 To set the duration of a timer cycle in milliseconds (default: 1000ms)
 
