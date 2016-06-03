@@ -32,3 +32,33 @@ Reading values out of pin 4 every 100ms
     }
 
 ## Overview
+    void setDuration( int )
+To set the duration of a timer cycle in milliseconds (default: 1000ms)
+
+    int getDuration()
+To get the duration of a timer cycle in milliseconds
+
+    void setLoop( bool )
+To set if the timer must loop or not
+
+    bool isLoop()
+To get if the timer is looping or not
+
+    bool isActive()
+To get if the timer is currently running.
+
+    void start()
+To start the timer
+
+    void start( int, bool )
+Convenience method to start the timer with a duration and loop flag
+
+    void stop()
+To stop the timer
+
+    int checkTime()
+To check how much time has passed since the start of the timer.
+If the timer loop is complete, returns -1.
+
+    bool isFinished()
+To check if this cycle is finished
