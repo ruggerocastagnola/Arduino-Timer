@@ -34,7 +34,13 @@
 #ifndef Timer_h
 #define Timer_h
 
-#include "Arduino.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+#include <Arduino.h>
+#else
+#include <WProgram.h>
+#endif
+
+typedef void (*callback)(void);
 
 class Timer {
     public: 
@@ -78,6 +84,9 @@ class Timer {
 
       // check if the timer has finished this cycle
       bool isFinished();
+
+      // convenience method with callback
+      bool isFinished( callback );
       
     private:
       // flag to determine whether the timer is running

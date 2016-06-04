@@ -31,7 +31,6 @@
  *
  */
 
-#include "Arduino.h"
 #include "Timer.h"
 
 Timer::Timer() {
@@ -104,7 +103,33 @@ bool Timer::isFinished() {
 
     int _passedTime = millis() - _startTime;
     if( _passedTime >= duration ) {
+
+      if( loop ) {
+        start();
+      } else {
+        stop();
+      }
       
+      return true;
+    } else {
+      return false;
+    }
+
+  } else {
+    return false;
+  }
+}
+
+// convenience method with callback
+bool Timer::isFinished( void(*callback)() ) {
+  if( _isActive ) {
+
+    int _passedTime = millis() - _startTime;
+    if( _passedTime >= duration ) {
+      
+      if( callback )
+        callback();
+
       if( loop ) {
         start();
       } else {

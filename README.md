@@ -8,7 +8,7 @@ A basic and rough Timer library for the Arduino, extended from Daniel Shiffman's
 * Open the Arduino IDE and `#include <timer.h>;`
 
 ### What it is for
-This is a very small and rough library for looping and non-looping timers. It is useful for triggering a function every n milliseconds, or reading values out of a sensor. There are lots of timer libraries for the Arduino. This one is about keeping it to the barebones.
+This is a very basic and rough library for looping and non-looping timers. It is useful for triggering a function every n milliseconds, or reading values out of a sensor. There are lots of good timer libraries for the Arduino. I wrote this one to have a simple start/stop interface for quick setups with sensors. 
 
 ### Usage
 Reading values out of pin 4 every 100ms
@@ -25,10 +25,12 @@ Reading values out of pin 4 every 100ms
     }
 
     void loop() {
-      if ( timer.isFinished() ) {
+      timer.isFinished( printVal );
+    }
+
+    void printVal() {
         int val = digitalRead( BUTTON_PIN );
         Serial.println( val );
-      }
     }
     
 Longer version
@@ -102,3 +104,8 @@ If the timer loop is complete, returns -1
 
     bool isFinished()
 To check if this cycle is finished
+
+
+
+    bool isFinished( void(*)() )
+Convenience method with callback

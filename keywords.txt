@@ -1,0 +1,12 @@
+Timer	KEYWORD1
+setDuration	KEYWORD2
+getDuration	KEYWORD2
+setLoop	KEYWORD2
+isLoop	KEYWORD2
+isActive	KEYWORD2
+start	KEYWORD2
+start	KEYWORD2
+stop	KEYWORD2
+checkTime	KEYWORD2
+isFinished	KEYWORD2
+isFinished	KEYWORD2
