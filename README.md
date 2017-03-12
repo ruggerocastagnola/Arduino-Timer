@@ -13,7 +13,7 @@ This is a very basic and rough library for looping and non-looping timers. It is
 ### Usage
 Reading values out of pin 4 every 100ms
 
-    #include <timer.h>;
+    #include <timer.h>
     #define BUTTON_PIN 4
     
     Timer timer;
@@ -35,7 +35,7 @@ Reading values out of pin 4 every 100ms
     
 Longer version
 
-    #include <timer.h>;
+    #include <timer.h>
     #define BUTTON_PIN 4
     
     Timer timer;
